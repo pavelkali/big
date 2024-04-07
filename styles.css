@@ -1,0 +1,230 @@
+/*обнуление стилей*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*шрифты*/
+@font-face {
+    font-family: Gilory;
+    src: url('./font/Gilroy-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: Gilory;
+    src: url('./font/Gilroy-Light.ttf');
+    font-weight: 300;
+}
+html{
+	font-family: Gilory;
+    font-size: 24px;
+	scroll-behavior: smooth;
+}
+
+h1{
+	font-weight: bold;
+	font-size: 2rem;
+}
+h2{
+	font-weight: bold;
+	font-size: 1rem;
+}
+h3{
+	font-weight: bold;
+	font-size: 0.7rem;
+}
+a{
+	text-decoration: none;
+	color: var(--white);
+}
+p{
+	font-weight: 300;
+}
+
+/*цвета*/
+:root {
+	--white:#FFF9F9;
+    --bg-color: #DFF2E3;
+    --button-color: #047218;}
+body{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	background-color: var(--bg-color);
+	min-width: 768px;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+/*хедр*/
+header{
+	padding: 0 1rem;
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: bold;
+	color: var(--white);
+	background: rgb(4,114,24);
+	background: linear-gradient(180deg, rgba(4,114,24,1) 0%, rgba(223,242,227,1) 100%);
+}
+/*мейн*/
+.poster{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.poster img{
+	width: 80%;
+	border-radius: 1rem;
+}
+.form__short{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	gap: 2rem;
+}
+.form__short input{
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 0.25rem;
+	padding: 0.5rem 1rem;
+}
+.form__short button{
+	color: var(--white);
+	background-color: var(--button-color);
+	border: 1px solid black;
+	border-radius: 0.25rem;
+	text-wrap:nowrap;
+	padding: 0.5rem 1rem;
+	font-weight: bold;
+}
+.mockup{
+	width: 50%;
+	margin: 0 auto;
+}
+.about{
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.about h1{
+	margin: 0 auto;
+}
+.form__full{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+.form__full input{
+	width: 50%;
+	border: 1px solid black;
+	border-radius: 0.25rem;
+	padding: 0.5rem 1rem;
+}
+.form__full button{
+	width: 56%;
+	color: var(--white);
+	background-color: var(--button-color);
+	border: 1px solid black;
+	border-radius: 0.25rem;
+	text-wrap:nowrap;
+	padding: 0.5rem 1rem;
+	font-weight: bold;
+}
+.contacts{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+.contacts img{
+	width: 60%;
+	border-radius: 1rem;
+}
+.address{
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+/*футер*/
+footer{
+	padding: 1rem;
+	margin-top: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: bold;
+	color: var(--white);
+	background: rgb(4,114,24);
+	background: linear-gradient(0deg, rgba(4,114,24,1) 0%, rgba(223,242,227,1) 100%);
+}
+.footer__logo{
+	display: flex;
+	flex-direction: column;
+}
+.footer__logo img{
+	margin: 0 auto;
+	scale: 0.8;
+}
+footer p{
+	text-align: center;
+}
+.h3__footer__left{
+	width: 200px;
+}
+.h3__footer__right{
+	width: 200px;
+	text-align: right;
+}
+@media (max-width:768px) {
+	html{
+		font-size: 18px;
+	}
+}
+

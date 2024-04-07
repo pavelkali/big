@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#contact"><h2>ОБРАТНАЯ СВЯЗЬ</h2></a>
+        <img src="./img/logo.svg">
+        <h2>info@bighouse.ru</h2>
+    </header>
+    <div class="wrapper">
+        <div class="poster">
+            <img src="./img/poster1.png"/>
+        </div>
+        <form class="form__short" action="https://formspree.io/f/mayrlqqw" method="post">
+            <input name="Tel" id="tel" type="tel" placeholder="Ваш номер телефона для связи" required>
+            <button type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+        </form>
+        <img class="mockup" src="./img/mockup.png">
+        <section class="about">
+            <h1>О НАС</h1>
+            <p>Большой дом стремится выполнять высококачественные, экономичные и своевременные проекты, которые постоянно превышают стандарты и гарантируют исключительную удовлетворенность клиентов.</p><br> <p>Мы стремимся обеспечить отличное качество и инновационные строительные решения. Наш совместный подход является ключом к нашему успеху, и наши проекты демонстрируют навыки и талант нашей команды во всех сферах нашей деятельности.</p>
+        </section>
+        <div class="poster">
+            <img src="./img/poster2.png"/>
+        </div>
+        <section class="about">
+            <h1>КАРЬЕРА</h1>
+            <p>Большой дом создает среду, которая поощряет совместный подход в сочетании с профессиональным ростом.</p><br> <p>У нас работают талантливые и целеустремленные, те, кто может доказать, что они работают по собственной инициативе в прогрессивной и сложной среде, и те, у кого есть необходимые навыки и опыт, чтобы использовать успех нашей процветающей компании.</p><br> <p>Мы признаем, что наши сотрудники являются нашим самым большим достоянием, и наша цель — предоставить им наилучшие возможности для роста и развития вместе с компанией, чтобы они могли реализовать свой потенциал.</p><br> Мы хотим привлечь самых талантливых и увлеченных людей присоединиться к нашему бизнесу. Большой дом стремится к равной оплате труда и обеспечению полноценной и обогащающей карьеры для наших сотрудников независимо от пола, религии, сексуальной ориентации, инвалидности или любых других защищенных характеристик.;</p>
+        </section>
+        <form class="form__full" action="https://formspree.io/f/mayrlqqw" method="post">
+            <h1>ВАША ОБРАТНАЯ СВЯЗЬ</h1>
+            <input name="Text" id="text" type="text" placeholder="Ваше имя и фамилия" required>
+            <input name="tel" id="tel" type="tel" placeholder="Ваш номер телефона" required>
+            <input name="Email" id="email" type="email" placeholder="Ваш email" required>
+            <button type="submit">ОТПРАВИТЬ</button>
+        </form>
+
+        <section class="contact" id="contact">
+            <h1>КОНТАКТЫ</h1>
+            <div class="contacts">
+                <div class="address">
+                    <p>info@bighouse.ru,<br> +78121112233</p>
+                    <p>Юридический адрес:<br> Россия, 191186,<br> Санкт-Петербург, ул. Большая Морская, 18</p>
+                </div>
+                <img src="./img/map.png">
+            </div>
+        </section>
+    </div>
+    <footer>
+        <h3 class="h3__footer__left">Большой дом - это проектно-строительная компания, работающая в следующих секторах: технический жилой коммерческий</h3>
+        <div class="footer__logo">
+            <img src="./img/logo.svg">
+            <p>info@bighouse.ru, +78121112233, <br>Юридический адрес: Россия, 191186, Санкт-Петербург, ул. Большая Морская, 18</p>
+        </div>
+        <h3 class="h3__footer__right">Мы выполним весь комплекс работ под ключ -от фундамента до внутренней отделки помещений</h3>
+    </footer>
+</body>
+<script src="./script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script>
+    // Анимация логотипа
+    gsap.from("header img", {
+        opacity: 0,
+        scale: 0.5,
+        duration: 1,
+        delay: 0.2
+    });
+
+    // Анимация почты
+    gsap.from("header h2:last-child", {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        delay: 0.4
+    });
+
+    // Анимация постера
+    gsap.from(".poster img", {
+        opacity: 0,
+        x: -200,
+        duration: 1,
+        delay: 0.6
+    });
+
+    // Анимация формы
+    gsap.from(".form__short", {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        delay: 0.8
+    });
+
+    // Анимация макета
+    gsap.from(".mockup", {
+        opacity: 0,
+        x: 200,
+        duration: 1,
+        delay: 1
+    });
+        // Анимация формы
+        gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".form__full", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".form__full",
+            start: "top 80%", // Начинать анимацию когда форма находится на 80% высоты экрана
+        }
+    });
+
+    // Анимация контактов
+    gsap.from(".contact", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".contact",
+            start: "top 80%", // Начинать анимацию когда секция контактов находится на 80% высоты экрана
+        }
+    });
+    
+</script>
+</html>
